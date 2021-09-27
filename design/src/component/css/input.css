@@ -1,0 +1,84 @@
+.main-block {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.navbar-header {
+  background-color: #28334f;
+}
+
+.btn-container {
+  display: flex;
+  position: absolute;
+  background-color: skyblue;
+  top: 664px;
+  left: 0px;
+  width: 100%;
+}
+
+.btn {
+  flex-grow: 1;
+  border: none;
+  border-radius: 0;
+  background-color: #28334f;
+  color: white;
+}
+.btn-3 {
+  background-color: #87af95;
+}
+.nav-icon {
+  color: white;
+  font-size: 1.8em;
+  margin-left: 0.5em;
+  margin-top: 0.15em;
+}
+.nav-container {
+  padding-left: 4px;
+}
+
+.roundedbtn-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.3em;
+}
+.round-group {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: solid 2px #5e554e;
+  background-color: #82af98;
+  color: white;
+  margin-left: 0.5em;
+}
+.product-title {
+  margin-top: 1.3em;
+  padding-bottom: 8px;
+  padding-left: 8em;
+  font-size: 14px;
+  color: darkgray;
+  border-bottom: solid 1px lightgray;
+  border-right: solid 1px lightgray;
+}
+.btn-title {
+  margin-left: 0.8em;
+  font-size: 13px;
+  font-weight: 600;
+  color: #737373;
+  margin-bottom: 5px;
+}
+.material-info {
+  background-color: #e5e5e5;
+  box-shadow: 0 3px 6px gray;
+  width: 30em;
+  height: 34em;
+  margin-left: 2em;
+}
+.inner-container {
+  background-color: white;
+}
+.btn-rp {
+  background-color: tomato;
+}
+.sidbar-container {
+  display: flex;
+}

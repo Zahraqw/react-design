@@ -1,0 +1,64 @@
+.room-active {
+  position: relative;
+  height: 96vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.change-room {
+  padding: 15px;
+  position: absolute;
+  right: 0;
+  font-size: 15px;
+  border: none;
+  color: white;
+  background-color: #28334f;
+}
+.bottom-block {
+  position: absolute;
+  bottom: 1em;
+  left: 3em;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.yes-option {
+  margin: auto 1em;
+  padding: 2px 8px;
+  background-color: #28334f;
+}
+.no-option:hover {
+  background-color: #28334f;
+  padding: 2px 8px;
+  color: white;
+}
+.yes-option:hover {
+  color: white;
+}
+.icon-block {
+  position: absolute;
+  bottom: 1em;
+  right: 2em;
+}
+.icon-wrapper {
+  background-color: #82af98;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  margin: 3px;
+}
+.heart-wrapper {
+  background-color: #fc5757;
+}
+.symbole {
+  color: white;
+  font-size: larger;
+}

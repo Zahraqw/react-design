@@ -1,0 +1,16 @@
+.product-info {
+  border-top: solid 1px gray;
+  padding: 10px;
+  margin: 2em 0;
+}
+h6 {
+  color: #515257;
+}
+.option-group {
+  background-color: #e5e5e5;
+  padding: 20px;
+}
+.item {
+  font-size: 6px;
+  margin: 0.5em;
+}
