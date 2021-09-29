@@ -1,4 +1,5 @@
 .main-container {
   border: solid 1px lightgray;
   margin: 1em 1em auto 2em;
+  max-width: 1440px;
 }

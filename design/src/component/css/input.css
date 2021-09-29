@@ -16,12 +16,16 @@
   width: 100%;
 }
 
-.btn {
+.btn-inner {
   flex-grow: 1;
   border: none;
   border-radius: 0;
   background-color: #28334f;
   color: white;
+}
+.btn-3[disabled] {
+  background-color: #28334f;
+  opacity: 0.5;
 }
 .btn-3 {
   background-color: #87af95;
@@ -40,6 +44,9 @@
   display: flex;
   flex-direction: column;
   margin-top: 1.3em;
+}
+.check {
+  margin-top: 3em;
 }
 .round-group {
   width: 60px;

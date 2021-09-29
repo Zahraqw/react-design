@@ -1,17 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Container, Col, Row } from "react-bootstrap";
+import { Navbar, Container } from "react-bootstrap";
 import "./css/input.css";
 import { BsList } from "react-icons/bs";
 import Product from "./Product";
 import Material from "./Material";
 import Headrail from "./Headrail";
+import Dialog from "./Dialog";
 
 function Input() {
-  const [btn1Clicked, setBtn1Clicked] = useState(false);
-  const [btn2Clicked, setBtn2Clicked] = useState(false);
-  const [btn3Clicked, setBtn3Clicked] = useState(false);
+  const [productchecked, setProductChecked] = useState({
+    selected: false,
+    value: "",
+  });
+  const [materialchecked, setMaterialChecked] = useState({
+    selected: false,
+    value: "",
+  });
+  const [headrialchecked, setHeadrialChecked] = useState({
+    selected: false,
+    value: "",
+  });
+  const [enableBuyBtn, setEnableBuyBtn] = useState(true);
+  const [show, setShow] = useState(false);
+  const [productDescription, setProductDescription] = useState([]);
 
+  useEffect(() => {
+    setProductDescription([
+      productchecked.value,
+      materialchecked.value,
+      headrialchecked.value,
+    ]);
+    productchecked.selected &&
+    materialchecked.selected &&
+    headrialchecked.selected
+      ? setEnableBuyBtn(false)
+      : setEnableBuyBtn(true);
+  }, [productchecked, materialchecked, headrialchecked]);
+
+  const handleBuyBtn = () => {
+    setShow(true);
+  };
   return (
     <div className="main-block">
       <Navbar variant="dark" className="navbar-header">
@@ -23,59 +52,69 @@ function Input() {
       <div className="product-title">RIGHT BASE LAYER - Shade</div>
       <div className="sidbar-container">
         <div className="roundedbtn-block">
-          <button
-            className="round-group"
-            onClick={() => {
-              setBtn1Clicked(true);
-            }}
-          >
-            btn1
-          </button>
+          <div className="round-group">
+            <input
+              type="checkbox"
+              className="check"
+              checked={productchecked.selected}
+              readOnly
+            />
+          </div>
           <div className="btn-title">PRODUCT</div>
-          <button
-            className="round-group"
-            onClick={() => {
-              setBtn2Clicked(true);
-            }}
-          >
-            btn2
-          </button>
+          <div className="round-group">
+            <input
+              type="checkbox"
+              className="check"
+              checked={materialchecked.selected}
+              readOnly
+            />
+          </div>
           <div className="btn-title">MATERIAL</div>
-          <button
-            className="round-group"
-            onClick={() => {
-              setBtn3Clicked(true);
-            }}
-          >
-            btn3
-          </button>
+          <div className="round-group">
+            <input
+              type="checkbox"
+              className="check"
+              checked={headrialchecked.selected}
+              readOnly
+            />
+          </div>
           <div className="btn-title">HEADRAIL</div>
         </div>
         <div className="material-info">
           <div className="inner-container">
-            {btn1Clicked && <Product />}
-            {btn2Clicked && <Material />}
-            {btn3Clicked && <Headrail />}
+            <Product productChecked={setProductChecked} />
+            <Material materialChecked={setMaterialChecked} />
+            <Headrail headrialChecked={setHeadrialChecked} />
           </div>
         </div>
       </div>
       <div className="btn-container">
-        <button className="btn">
+        <button className="btn-inner">
           Free In-Home
           <br />
           <b>MEASURE</b>
         </button>
-        <button className="btn">
+
+        <button className="btn-inner">
           Chat with our
           <br />
           <b>DESIGNERS</b>
         </button>
-        <button className="btn btn-3">
+        <button
+          className="btn-inner btn-3"
+          disabled={enableBuyBtn}
+          onClick={handleBuyBtn}
+        >
           Configure and
           <br />
           <b>BUY NOW</b>
         </button>
       </div>
+      <Dialog
+        setShow={setShow}
+        show={show}
+        productDescription={productDescription}
+      />
     </div>
   );
 }
