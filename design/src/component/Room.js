@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { BsFillPlusCircleFill } from "react-icons/bs";
 import "./css/rooms.css";
 import RoomIcons from "./RoomIcons";
 
@@ -7,6 +8,8 @@ function Room(props) {
   const [roomItems, setRoomItem] = useState([]);
   const [roomIndex, setRoomIndex] = useState(0);
   const [activeRoom, setActiveRoom] = useState("");
+  const [displayCurtain, setDisplayCurtain] = useState("none");
+  const [displayChair, setDisplayChair] = useState("none");
 
   useEffect(() => {
     axios
@@ -29,6 +32,8 @@ function Room(props) {
     setRoomIndex((roomIndex + 1) % roomItems.length);
   };
   const handleClickedItem = () => {
+    setDisplayCurtain("block");
+    setDisplayChair("none");
     props.addProductInfo([
       { title: "Choose Headrail size", product1: "Medium", product2: "Large" },
       {
@@ -39,12 +44,14 @@ function Room(props) {
       {
         title: "choose Headrail and Color",
         color1: "Fabric Wrapped",
-        color2: "Brushed NicKel",
+        color2: "NicKel",
         color3: "Bronze",
       },
     ]);
   };
   const handleChairClicked = () => {
+    setDisplayCurtain("none");
+    setDisplayChair("block");
     props.addProductInfo([
       { title: "Choose Chair size", product1: "Medium", product2: "Large" },
       {
@@ -83,6 +90,22 @@ function Room(props) {
           useMap="#workmap"
           className="active-room"
         />
+        <div
+          className="curtain-block"
+          style={{
+            display: displayCurtain,
+          }}
+        >
+          <BsFillPlusCircleFill className="acvtie-item" />
+        </div>
+        <div
+          className="chair-block"
+          style={{
+            display: displayChair,
+          }}
+        >
+          <BsFillPlusCircleFill className="acvtie-item" />
+        </div>
       </div>
 
       <button onClick={changRoom} className=" change-room">

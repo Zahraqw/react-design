@@ -53,9 +53,18 @@
   height: 60px;
   border-radius: 50%;
   border: solid 2px #5e554e;
-  background-color: #82af98;
+
   color: white;
   margin-left: 0.5em;
+}
+.r-1 {
+  background-color: cornsilk;
+}
+.r-2 {
+  background-color: #c1c4af;
+}
+.r-3 {
+  background-color: #82817c;
 }
 .product-title {
   margin-top: 1.3em;

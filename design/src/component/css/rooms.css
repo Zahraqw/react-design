@@ -20,6 +20,21 @@
   color: white;
   background-color: #28334f;
 }
+.curtain-block {
+  position: absolute;
+  left: 180px;
+  top: 150px;
+}
+.chair-block {
+  position: absolute;
+  left: 240px;
+  top: 500px;
+}
+.acvtie-item {
+  font-size: 30px;
+  color: #fff8dc;
+}
+
 .bottom-block {
   position: absolute;
   bottom: 1em;

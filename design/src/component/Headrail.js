@@ -18,20 +18,24 @@ function Headrail(props) {
         <div className="product-info">
           <h6>{productOption[1].title}</h6>
           <div className="option-group" onChange={onChangeValue}>
-            <input
-              type="radio"
-              value={productOption[1].type1}
-              name="Headrail"
-              className="item"
-            />
-            {productOption[1].type1}
-            <input
-              type="radio"
-              value={productOption[1].type2}
-              name="Headrail"
-              className="item"
-            />
-            {productOption[1].type2}
+            <span className="radio-wrapper">
+              <input
+                type="radio"
+                value={productOption[1].type1}
+                name="Headrail"
+                className="item"
+              />
+              {productOption[1].type1}
+            </span>
+            <span className="radio-wrapper">
+              <input
+                type="radio"
+                value={productOption[1].type2}
+                name="Headrail"
+                className="item"
+              />
+              {productOption[1].type2}
+            </span>
           </div>
         </div>
       ) : null}

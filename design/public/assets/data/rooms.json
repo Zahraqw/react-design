@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "room1",
-    "image": "images/room1.jpg",
+    "image": "images/room3.jpg",
     "style": "style-1"
   },
   {
@@ -14,7 +14,7 @@
   {
     "id": "3",
     "name": "room3",
-    "image": "images/room3.jpg",
+    "image": "images/room1.jpg",
     "style": "style-3"
   },
   {

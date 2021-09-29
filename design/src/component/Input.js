@@ -52,7 +52,7 @@ function Input() {
       <div className="product-title">RIGHT BASE LAYER - Shade</div>
       <div className="sidbar-container">
         <div className="roundedbtn-block">
-          <div className="round-group">
+          <div className="round-group r-1">
             <input
               type="checkbox"
               className="check"
@@ -61,7 +61,7 @@ function Input() {
             />
           </div>
           <div className="btn-title">PRODUCT</div>
-          <div className="round-group">
+          <div className="round-group r-2">
             <input
               type="checkbox"
               className="check"
@@ -70,7 +70,7 @@ function Input() {
             />
           </div>
           <div className="btn-title">MATERIAL</div>
-          <div className="round-group">
+          <div className="round-group r-3">
             <input
               type="checkbox"
               className="check"

@@ -8,9 +8,12 @@ h6 {
 }
 .option-group {
   background-color: #e5e5e5;
-  padding: 20px;
+  padding: 20px 10px;
 }
 .item {
   font-size: 6px;
   margin: 0.5em;
+}
+.radio-wrapper {
+  margin-left: 20px;
 }

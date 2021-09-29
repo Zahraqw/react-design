@@ -18,27 +18,31 @@ function Material(props) {
         <div className="product-info">
           <h6>{productOption[2].title}</h6>
           <div className="option-group" onChange={onChangeValue}>
-            <input
-              type="radio"
-              value={productOption[2].color1}
-              name="color"
-              className="item"
-            />
-            {productOption[2].color1}
-            <input
-              type="radio"
-              value={productOption[2].color2}
-              name="color"
-              className="item"
-            />
-            {productOption[2].color2}
-            <input
-              type="radio"
-              value={productOption[2].color3}
-              name="color"
-              className="item"
-            />
-            {productOption[2].color3}
+            <span className="radio-wrapper">
+              <input
+                type="radio"
+                value={productOption[2].color1}
+                name="color"
+                className="item"
+              />
+              {productOption[2].color1}
+            </span>
+            <span className="radio-wrapper">
+              <input
+                type="radio"
+                value={productOption[2].color2}
+                name="color"
+                className="item"
+              />
+              {productOption[2].color2}
+              <input
+                type="radio"
+                value={productOption[2].color3}
+                name="color"
+                className="item"
+              />
+              {productOption[2].color3}
+            </span>
           </div>
         </div>
       ) : null}
